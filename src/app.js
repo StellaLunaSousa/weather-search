@@ -13,7 +13,7 @@ function handleSearchFormSubmit(event) {
 
 function searchCity(city) {
     let apiKey = "e1be014tf0fdae934obf9211d31032be";
-    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
+    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
     axios.get(apiUrl).then(updateWeather);
 }
 
@@ -24,7 +24,7 @@ function updateWeather(response) {
     cityElement.innerHTML = response.data.city;
 
     let dateElement = document.querySelector('#date');
-    dateElement.innerHTML = formatTime(response.data.time);
+    dateElement.innerHTML = formatTime(response.data.time * 1000);
 
     let weatherIconElement = document.querySelector('#weather-icon');
     weatherIconElement.setAttribute('src', response.data.condition.icon_url);
@@ -52,7 +52,7 @@ function updateWeather(response) {
 }
 
 function formatTime(timestamp) {
-    let date = new Date();
+    let date = new Date(timestamp);
     let days = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
     let day = days[date.getDay()];
     let hours = date.getHours();
