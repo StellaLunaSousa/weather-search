@@ -1,3 +1,115 @@
 *{
-    border: 1px solid rgb(255, 0, 0);
+    /* border: 1px solid red; */
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+html {
+    height: 100vh;
+    background-color: aliceblue;
+}
+body {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+header{
+    text-align: center;
+    line-height: 1.25;
+    
+}
+
+header h1 {
+    font-size: 2rem;
+    font-weight: 200;
+    margin: 0;
+    color: #333;
+}
+
+header h2 {
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin: 0;
+    color: #333;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+
+}
+
+main hr {
+    width: 10%;
+    margin-top: 20px;
+}
+
+footer{
+    text-align: center;
+    font-size: 0.75rem;
+    color: #333;
+}
+
+form {
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    height: 40px;
+    
+}
+
+#input-search {
+    width: 70%;
+    border-radius: 5px;
+    background-color: rgb(207, 226, 255);
+    color: #000;
+    padding: 0 0.5rem;
+    border-style: none;
+}
+#input-submit {
+    width: 30%;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: royalblue;
+    color: #fff;
+    border-style: none;
+}
+#weather-temperature {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+#other-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    
+}
+
+#other-info div {
+    text-align: center;
+    width: 100px;
+}
+
+.other-info-icon {
+    width: 35px;
+    height: 35px;
+}
+
+.other-info-title {
+    font-size: 0.75rem;
+}
+
+.other-info-value {
+    font-size: 1.1rem;
+}
+
+#weather-icon {
+    width: 120px;
+    height: 120px;
+    margin: 10px 0;
 }
