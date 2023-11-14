@@ -18,7 +18,6 @@ function searchCity(city) {
 }
 
 function updateWeather(response) {
-    console.log(response);
 
     let cityElement = document.querySelector('#city');
     cityElement.innerHTML = response.data.city;
@@ -54,13 +53,13 @@ function updateWeather(response) {
 
 function formatTime(timestamp) {
     let date = new Date(timestamp);
-    let days = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
+    let days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     let day = days[date.getDay()];
     let hours = date.getHours();
     hours = hours < 10 ? '0' + hours : hours;
     let minutes = date.getMinutes();
     minutes = minutes < 10 ? '0' + minutes : minutes;
-    return `${day.toLowerCase()} ${hours}:${minutes}`
+    return `${day} ${hours}:${minutes}`
 }
 
 function formatDay(timestamp) {
@@ -71,7 +70,6 @@ function formatDay(timestamp) {
 }
 
 function displayForecast(response){
-    console.log(response);
 
     let forecastHTML = ``;
     response.data.daily.forEach(function(day, index){

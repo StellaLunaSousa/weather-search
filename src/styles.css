@@ -22,14 +22,14 @@ header{
 
 header h1 {
     font-size: 2rem;
-    font-weight: 200;
+    font-weight: 400;
     margin: 0;
     color: #fff;
 }
 
 header h2 {
     font-size: 1.25rem;
-    font-weight: 400;
+    font-weight: 200;
     margin: 0;
     color: #fff;
 }
@@ -63,6 +63,10 @@ form {
     height: 40px;
     
 }
+
+a {
+    color:rgb(86, 103, 201);
+}
 #form-container {
     width: 80%;
 }
@@ -70,7 +74,7 @@ form {
 #input-search {
     width: 70%;
     border-radius: 5px;
-    background-color: rgb(194, 218, 253);
+    background-color: rgb(255, 255, 255);
     color: #000;
     padding: 0 0.5rem;
     border-style: none;
@@ -80,7 +84,7 @@ form {
     min-width: 75px;
     border-radius: 5px;
     font-size: 1rem;
-    background-color: royalblue;
+    background-color: rgb(86, 103, 201);
     color: #fff;
     border-style: none;
 }
@@ -118,17 +122,17 @@ form {
 }
 
 #weather-icon {
-    width: 120px;
-    height: 120px;
-    margin: 10px 0;
+    width: 140px;
+    height: 140px;
 }
 
 #forecast {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     width: 80%;
     margin-bottom: 20px;
     text-align: center;
+    gap: 10px;
 }
 
 .forecast-icon {
