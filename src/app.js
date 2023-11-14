@@ -63,29 +63,30 @@ function formatTime(timestamp) {
     return `${day.toLowerCase()} ${hours}:${minutes}`
 }
 
+function formatDay(timestamp) {
+    let date = new Date(timestamp * 1000);
+    let day = date.getDay();
+    let days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+    return days[day];
+}
+
 function displayForecast(response){
     console.log(response);
 
     let forecastHTML = ``;
-    let forecastDays = 5;
-    response.data.daily.forEach(function(day){
-        if (forecastDays > 0) {
-            forecastDays--;
-        } else {
-            return;
-        }
-        
+    response.data.daily.forEach(function(day, index){
+        if (index > 4) return;
         forecastHTML += `
-    <div class="forecast-container">
-        <div class="forecast-date">DAY</div>
-        <div><img class="forecast-icon" src="https://www.svgrepo.com/show/451956/weather-showers.svg"></div>
+        <div class="forecast-container">
+        <div class="forecast-date">${formatDay(day.time)}</div>
+        <div><img class="forecast-icon" src="${day.condition.icon_url}"></div>
         <div class="forecast-temperature">
-            <span class="forecast-temperature-max">${Math.round(day.temperature.maximum)}º</span> 
-            <span class="forecast-temperature-min">${Math.round(day.temperature.minimum)}º</span>
+        <span class="forecast-temperature-max">${Math.round(day.temperature.maximum)}º</span> 
+        <span class="forecast-temperature-min">${Math.round(day.temperature.minimum)}º</span>
         </div>
-    </div>`;
+        </div>`;
     });
-
+    
     let forecastElement = document.querySelector('#forecast');
     forecastElement.innerHTML = forecastHTML;
 }

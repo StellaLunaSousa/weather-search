@@ -1,15 +1,17 @@
 *{
     /* border: 1px solid red; */
     font-family: 'Nunito Sans', sans-serif;
+    color: #fff;
 }
 
 html {
     height: 100vh;
-    background-color: rgb(217, 230, 245);
+    background-color: rgb(36, 40, 58);
+    
 }
 body {
     max-width: 500px;
-    margin: 0 auto;
+    margin: 50px auto;
     padding: 20px;
 }
 header{
@@ -22,14 +24,14 @@ header h1 {
     font-size: 2rem;
     font-weight: 200;
     margin: 0;
-    color: #333;
+    color: #fff;
 }
 
 header h2 {
     font-size: 1.25rem;
     font-weight: 400;
     margin: 0;
-    color: #333;
+    color: #fff;
 }
 
 main {
@@ -50,7 +52,7 @@ main hr {
 footer{
     text-align: center;
     font-size: 0.75rem;
-    color: #333;
+    color: #fff;
 }
 
 form {
@@ -85,7 +87,7 @@ form {
 #weather-temperature {
     font-size: 2.5rem;
     font-weight: bold;
-    color: #333;
+    color: #fff;
 }
 
 #other-info {
@@ -131,7 +133,7 @@ form {
 
 .forecast-icon {
     vertical-align: middle;
-    width: 24px;
+    width: 48px;
 }
 
 .forecast-container {
