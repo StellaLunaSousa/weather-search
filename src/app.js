@@ -56,11 +56,8 @@ function formatTime(timestamp) {
     let days = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
     let day = days[date.getDay()];
     let hours = date.getHours();
-    let ampm = hours >= 12 ? 'PM' : 'AM';
-    hours = hours % 12;
-    hours = hours ? hours : 12;
     hours = hours < 10 ? '0' + hours : hours;
     let minutes = date.getMinutes();
     minutes = minutes < 10 ? '0' + minutes : minutes;
-    return `${day.toLowerCase()} ${hours}:${minutes} ${ampm}`
+    return `${day.toLowerCase()} ${hours}:${minutes}`
 }
