@@ -61,3 +61,24 @@ function formatTime(timestamp) {
     minutes = minutes < 10 ? '0' + minutes : minutes;
     return `${day.toLowerCase()} ${hours}:${minutes}`
 }
+
+function updateForecast(){
+    let days = ['Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+    let forecastHTML = ``;
+    days.forEach(function(day){
+        forecastHTML += `
+    <div class="forecast-container">
+        <div class="forecast-date">${day}</div>
+        <div><img class="forecast-icon" src="https://www.svgrepo.com/show/451956/weather-showers.svg"></div>
+        <div class="forecast-temperature">
+            <span class="forecast-temperature-max">30º</span> 
+            <span class="forecast-temperature-min">22º</span>
+        </div>
+    </div>`;
+    });
+
+    let forecastElement = document.querySelector('#forecast');
+    forecastElement.innerHTML = forecastHTML;
+}
+
+updateForecast();

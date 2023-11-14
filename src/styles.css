@@ -43,7 +43,7 @@ main {
 
 main hr {
     width: 10%;
-    margin-top: 20px;
+    margin-bottom: 20px;
     border-style: solid;
 }
 
@@ -93,7 +93,7 @@ form {
     align-items: center;
     justify-content: center;
     margin-top: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     
 }
 
@@ -119,6 +119,33 @@ form {
     width: 120px;
     height: 120px;
     margin: 10px 0;
+}
+
+#forecast {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.forecast-icon {
+    vertical-align: middle;
+    width: 24px;
+}
+
+.forecast-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.forecast-date {
+    opacity: 0.6;
+}
+
+.forecast-temperature-min {
+    opacity: 0.6;
 }
 
 /* #date, #weather-message {
